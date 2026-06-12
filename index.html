@@ -356,16 +356,66 @@
             margin-top: 3rem;
         }
 
+        .footer-contact {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .footer-contact a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tablets & large phones */
         @media (max-width: 768px) {
+            .hero { padding: 3.5rem 5%; }
             .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.05rem; }
+
+            .container { padding: 3rem 5%; }
+            .section-title { font-size: 1.8rem; margin-bottom: 2rem; }
+
             .features-grid { grid-template-columns: 1fr; }
             .detail-grid { grid-template-columns: 1fr; }
+
+            .feature-section { padding: 3rem 5%; }
             .feature-media { grid-template-columns: 1fr; gap: 1.5rem; }
-            .media-row { gap: 1.5rem; }
-            .media-row img { height: auto; width: 100%; }
+
+            .media-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+            .media-row img { height: auto; width: 100%; max-width: 520px; }
             .media-row .mobile-shot { max-width: 280px; margin: 0 auto; }
+
+            .feature-header { gap: 1rem; margin-bottom: 1rem; }
             .feature-header h2 { font-size: 1.5rem; }
             .feature-number { width: 50px; height: 50px; font-size: 1.3rem; }
+            .feature-inner > .section-description { font-size: 1.05rem; margin-bottom: 1.8rem; }
+        }
+
+        /* Small phones */
+        @media (max-width: 480px) {
+            header { padding: 1.2rem 5%; }
+            .logo { font-size: 1.5rem; }
+
+            .hero { padding: 3rem 5%; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+
+            .feature-section { padding: 2.5rem 5%; }
+            .feature-header h2 { font-size: 1.3rem; }
+            .feature-number { width: 44px; height: 44px; font-size: 1.15rem; }
+
+            .feature-card { padding: 1.5rem; }
+            .detail-item { padding: 1.25rem; }
+
+            .modal-close { top: 1rem; right: 1rem; }
         }
     </style>
 </head>
@@ -701,7 +751,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 S2P connect. All rights reserved.</p>
+        <p class="footer-contact">Contact us: <a href="mailto:tech@livetronics.in">tech@livetronics.in</a></p>
+        <p>&copy; 2026 Livetronics Pvt Ltd. All rights reserved.</p>
     </footer>
 
     <!-- Image Lightbox Modal -->
